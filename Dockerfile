@@ -2,6 +2,9 @@ FROM alpine:latest
 LABEL maintainer "Steven Iveson <steve@iveson.eu>"
 LABEL source "https://github.com/sjiveson/nfs-server-alpine"
 LABEL branch "master"
+ENV WEBPROC_VERSION 0.4.0
+ENV WEBPROC_URL https://github.com/jpillora/webproc/releases/download/v0.4.0/webproc_0.4.0_linux_armv7.gz
+
 COPY Dockerfile README.md /
 
 RUN apk add --no-cache --update --verbose nfs-utils bash iproute2 curl && \
