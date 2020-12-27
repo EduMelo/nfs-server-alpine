@@ -16,4 +16,4 @@ COPY .bashrc /root/.bashrc
 
 RUN chmod +x /usr/bin/nfsd.sh
 
-ENTRYPOINT ["/usr/bin/nfsd.sh"]
+ENTRYPOINT ["webproc","-c","/etc/exports","--","/usr/bin/nfsd.sh"]
